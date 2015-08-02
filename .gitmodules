@@ -1,0 +1,3 @@
+[submodule "RcppCAF"]
+	path = RcppCAF
+	url = https://github.com/grantbrown/RcppCAF.git
