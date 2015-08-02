@@ -17,12 +17,15 @@ def processFiles(dirname):
             f_handle = open(f, "r")
             fdat = f_handle.readlines()
             idx = 0
+            lines_since_annot = 0
             insert_idx = []
             for ln in fdat:
                 #tmpln = ln.replace("std::", "")
-                if (ln[0] != " " and any([(x + "::") in ln for x in classes])):
+                if (ln[0] != " " and any([(x + "::") in ln for x in classes]) and lines_since_annot > 0):
                     outLines.append(ln)
                     insert_idx.insert(0, idx)
+                    lines_since_annot = 0
+                lines_since_annot += 1
                     #fdat.insert(idx, "// [[register]]\n")
                 idx += 1
             for idx in insert_idx:

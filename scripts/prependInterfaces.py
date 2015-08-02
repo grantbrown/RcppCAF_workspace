@@ -11,7 +11,7 @@ def processFiles(dirname):
             print(f)
             f_handle = open(f, "r")
             fdat = f_handle.readlines()
-            fdat.insert(0, "// [[Rcpp::interfaces(cpp)]]\n")
+            fdat.insert(0, "// [[Rcpp::interfaces(cpp,r)]]\n")
             f_handle.close()
             f_handle = open(f, "w")
             f_handle.writelines(fdat)
