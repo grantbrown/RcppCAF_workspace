@@ -1,3 +1,6 @@
 [submodule "RcppCAF"]
 	path = RcppCAF
 	url = https://github.com/grantbrown/RcppCAF.git
+[submodule "Kmisc"]
+	path = Kmisc
+	url = https://github.com/grantbrown/Kmisc.git
